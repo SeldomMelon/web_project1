@@ -13,10 +13,10 @@ import java.io.PrintWriter;
 public class Calculator extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        Double a = Double.valueOf(Integer.parseInt(request.getParameter("a")));
-        Double b = Double.valueOf(Integer.parseInt(request.getParameter("b")));
+        double a = Double.parseDouble((request.getParameter("a")));
+        double b = Double.parseDouble((request.getParameter("b")));
         String operation = request.getParameter("operation");
-        Double result = Double.valueOf(0);
+        double result = 0;
 
         switch (operation) {
             case "adding" :
